@@ -1,0 +1,60 @@
+import asyncio
+import websockets
+import os
+from dotenv import load_dotenv
+import google.generativeai as genai
+import nltk
+
+nltk.download('vader_lexicon')
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Configure Google Gemini API
+api_key = os.getenv("GOOGLE_API_KEY")
+if api_key is None:
+    raise ValueError("API key not found in environment variables.")
+genai.configure(api_key=api_key)
+
+# Initialize sentiment analyzer
+sid = SentimentIntensityAnalyzer()
+
+# Create the model with desired configuration
+generation_config = {
+    "temperature": 2,
+    "top_p": 0.95,
+    "top_k": 64,
+    "max_output_tokens": 8192,
+    "response_mime_type": "text/plain",
+}
+
+model = genai.GenerativeModel(
+    model_name="gemini-1.5-flash",
+    generation_config=generation_config,
+)
+
+async def generate_poem_parts(prompt, websocket):
+    # Start a chat session with the model
+    chat_session = model.start_chat(history=[])
+    response = chat_session.send_message(prompt)
+    
+    # Process and send each part of the poem as it is generated
+    for candidate in response.candidates:
+        poem_text = " ".join([part.text for part in candidate.content.parts])
+        for sentence in poem_text.split(". "):
+            if sentence:
+                print(sentence.strip())
+                await websocket.send(sentence.strip() + ".")  # Send each sentence as it's ready
+                await asyncio.sleep(0.5)  # Simulate delay for demonstration
+
+async def handle_connection(websocket, path):
+    async for message in websocket:
+        await generate_poem_parts(message, websocket)
+
+async def main():
+    async with websockets.serve(handle_connection, "localhost", 8765):
+        await asyncio.Future()  # Run server until interrupted
+
+if __name__ == '__main__':
+    asyncio.run(main())
