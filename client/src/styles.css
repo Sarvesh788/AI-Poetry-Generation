@@ -1,4 +1,4 @@
-/* App.css */
+/* App.css
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -88,14 +88,14 @@ body {
   border: none;
   font-size: 16px;
   background-color: #4d4d4d; /* Dark gray background for input */
-  color: #cccccc; /* Light gray text */
-}
+  /* color: #cccccc; /* Light gray text */
+/* } */
 
-.poem-input input::placeholder {
+/* .poem-input input::placeholder {
   color: #7d7d7d; /* Gray placeholder text */
-}
+/* } */ 
 
-.poem-input button {
+/* .poem-input button {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -104,8 +104,8 @@ body {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
+} */
 
-.poem-input button:hover {
+/* .poem-input button:hover {
   background-color: #ffa73b;
-}
+}  */

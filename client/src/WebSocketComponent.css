@@ -1,175 +1,189 @@
-/* App.css */
+/* WebSocketComponent.css */
+
 body {
-    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1a1a1a;
-    color: #f5f5f5;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
-.app {
-    display: flex;
-    height: 100%;
-}
-
-.sidebar {
-    width: 30%;
-    background: linear-gradient(to bottom, #000000, #333333);
-    padding: 20px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-    overflow-y: auto;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin: 15px 0;
-    padding: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    color: #f5f5f5;
-    transition: color 0.3s ease;
-}
-
-.sidebar ul li:hover {
-    color: #ff9f43;
-}
-
 .poem-container {
-    flex: 1;
-    background: #1a1a1a;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    /* padding: 20px; */
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    background-color: #1e1e1e;
     color: #ffffff;
+  }
+  
+  .poem-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
     overflow-y: auto;
-}
-
-.poem-display {
-    flex: 1;
+  }
+  
+  .poem-output-container {
+    flex-grow: 1;
     overflow-y: auto;
     margin-bottom: 20px;
-}
-
-.poem-display h2, .poem-display h3 {
-    color: #ff9f43;
-}
-
-.poem-display h2 {
-    font-size: 28px;
+  }
+  
+  .poem-subheading {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .poem-output {
+    white-space: pre-wrap;
+  }
+  
+  .poem-line {
+    margin-bottom: 5px;
+  }
+  
+  .settings-button {
+    align-self: flex-end;
     margin-bottom: 20px;
-}
-
-.poem-display h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.poem-display .poem-line {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #cccccc;
-}
-
-.poem-input input {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
-    background-color: #4d4d4d;
-    color: #cccccc;
-}
-
-.poem-input input::placeholder {
-    color: #7d7d7d;
-}
-
-.poem-input button {
     padding: 10px 20px;
-    border-radius: 5px;
+    background-color: #4a4a4a;
+    color: #ffffff;
     border: none;
-    background-color: #ff9f43;
-    color: #1a1a1a;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #d3-container {
+    width: 380px;
+    height: 380px;
+    margin: 0 auto 20px;
+    position: relative;
+    left: -20px;
+    top: -20px;
+  }
+  
+  .poem-input-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 20px;
+    background-color: #2a2a2a;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .poem-input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+  }
+  
+  .poem-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .poem-button:hover {
+    background-color: #5a5a5a;
+  }
+  
+  .settings-button {
+    align-self: flex-end;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #d3-container {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto 20px;
+  }
+  
+  /* .poem-input-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 20px;
+    background-color: #2a2a2a;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .poem-input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+  }
+  
+  .poem-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .poem-button:hover {
+    background-color: #5a5a5a;
+  } */
+
+.settings-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4d4d4d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.poem-input button:hover {
-    background-color: #ffa73b;
+.settings-button:hover {
+    background-color: #5e5e5e;
 }
 
-.poem-output-container {
-    width: 100%;
-    max-width: 600px;
-    background-color: #222222;
-    border-radius: 8px;
-    /* padding: 20px; */
-    margin-bottom: 20px;
-    overflow-y: auto;
-    flex-grow: 1;
-}
-
-.poem-output {
-    color: #cccccc;
-    font-size: 18px;
-    line-height: 1.5;
-    white-space: pre-wrap;
-}
-
-.poem-subheading {
-    color: #ffffff;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.poem-input-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    color: gray;
-    padding: 10px;
-    border-radius: 8px;
+#d3-container {
     position: fixed;
+    right: 20px;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 430px;
+    height: 430px;
+    padding: 20px;
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.poem-input {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #555555;
-    background-color: #444444;
-    color: #ffffff;
-    margin-right: 10px;
-    flex: 1;
-}
-
-.poem-button {
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #555555;
-    background-color: #555555;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.poem-button:hover {
-    background-color: #777777;
+#d3-container svg {
+    width: 100%;
+    height: 100%;
 }

@@ -1,9 +1,5 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
-import Overview from './Overview';
-import Welcome from './Welcome';
-// import ChoosePlatforms from './ChoosePlatforms';
-// import FacebookAds from './FacebookAds';
 import WebSocketComponent from './WebSocketComponent';
 import './styles.css';
 

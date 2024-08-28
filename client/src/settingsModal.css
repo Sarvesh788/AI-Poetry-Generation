@@ -1,0 +1,49 @@
+.modal-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    color: #e0e0e0;
+    max-width: 400px;
+    width: 100%;
+    max-height: 80vh; /* Set a maximum height */
+    overflow-y: auto; /* Allow scrolling if content exceeds the height */
+    position: fixed;
+    top:7%;
+    right : 0%;
+    z-index: 1001;
+}
+
+.slider-container {
+    margin: 10px 0;
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.slider-container input[type="range"] {
+    width: 100%;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-buttons button:hover {
+    background-color: #ffffff;
+}

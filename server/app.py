@@ -36,7 +36,12 @@ model = genai.GenerativeModel(
 
 async def generate_poem_parts(prompt, websocket):
     # Start a chat session with the model
+    msg = "Generate any poem on: \""
     chat_session = model.start_chat(history=[])
+    prompt = msg + prompt
+    prompt += "\"Don't generate anything else as this is to be displayed atomatically."
+    prompt += "\n At the end give the rating of the poem based on 4 paramaters happiness, terrifying, grammar, rhyming as happiness-'Value between 0-100' and so on, no headings, poem, paramaters(plain text, no stars): No(plain text), Eg : Happiness: 70\nTerrifying: 23\nGrammar: 13\nRhyming: 54."
+    print(prompt)
     response = chat_session.send_message(prompt)
     
     # Process and send each part of the poem as it is generated
@@ -44,7 +49,7 @@ async def generate_poem_parts(prompt, websocket):
         poem_text = " ".join([part.text for part in candidate.content.parts])
         for sentence in poem_text.split(". "):
             if sentence:
-                print(sentence.strip())
+                # print(sentence.strip())
                 await websocket.send(sentence.strip() + ".")  # Send each sentence as it's ready
                 await asyncio.sleep(0.5)  # Simulate delay for demonstration
 
