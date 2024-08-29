@@ -43,7 +43,8 @@ const WebSocketComponent = () => {
   };
 
   useEffect(() => {
-    ws.current = new WebSocket('ws://localhost:8765');
+    const wsUrl = `wss://ai-poetry-generation-backend-new-tag.onrender.com`;
+        ws.current = new WebSocket(wsUrl);
 
     ws.current.onopen = () => {
       console.log('WebSocket connection established');

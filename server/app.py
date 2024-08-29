@@ -54,12 +54,15 @@ async def generate_poem_parts(prompt, websocket):
                 await asyncio.sleep(0.5)  # Simulate delay for demonstration
 
 async def handle_connection(websocket, path):
-    async for message in websocket:
-        await generate_poem_parts(message, websocket)
+    port = int(os.environ.get("PORT", 8765))
+    server = await serve(handle_connection, "0.0.0.0", port, 
+                         origins=["http://localhost:3000"])  # Add your frontend's URL here
+    print(f"WebSocket server started on 0.0.0.0:{port}")
+    await server.wait_closed()
 
 async def main():
-    async with websockets.serve(handle_connection, "localhost", 8765):
-        await asyncio.Future()  # Run server until interrupted
-
+    server = await websockets.serve(handle_connection, "0.0.0.0", 8765)
+    print("WebSocket server started on 0.0.0.0:8765")
+    await server.wait_closed()
 if __name__ == '__main__':
     asyncio.run(main())
