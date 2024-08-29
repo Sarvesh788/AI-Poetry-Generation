@@ -30,6 +30,9 @@
 - Finalize documentation
 - Prepare for deployment
 
+![Screenshot 2024-08-28 195118](https://github.com/user-attachments/assets/3f2f676c-4f65-4430-9254-39ccfe7f2b9e)
+
+
 ### System Architecture Diagram
 ```mermaid
 graph TD
