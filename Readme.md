@@ -10,21 +10,23 @@
 - Install necessary dependencies
 
 **Backend Development**
-- Implement WebSocket server
+- Implemented WebSocket server
+- Implemented in Python
 - Integrate Gemini 1.5 for poem generation
 
 **Frontend Development**
+- Implemented in React-Spring
 - Create main WebSocketComponent
 - Implement speech recognition
 - Develop settings modal
 - Design and implement UI
 
 **Data Visualization**
-- Implement D3.js for radar chart
+- Implemented D3.js for radar chart
 
 **Testing and Refinement**
-- Conduct thorough testing
-- Refine UI and functionality
+- Conducted thorough testing
+- Refineed UI and functionality
 
 **Documentation and Deployment**
 - Finalize documentation
