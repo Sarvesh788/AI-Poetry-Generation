@@ -33,6 +33,7 @@
 - Render for backend ( Backend URL: https://ai-poetry-generation-backend-new-tag.onrender.com/ )
 
 ![Screenshot 2024-08-28 195118](https://github.com/user-attachments/assets/3f2f676c-4f65-4430-9254-39ccfe7f2b9e)
+Note: This diagram is when run after downloading the files. Otherwise it uses wss (not ws) and backend url to access data via websockets.
 
 
 ### System Architecture Diagram
