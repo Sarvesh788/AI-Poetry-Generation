@@ -5,30 +5,32 @@
 
 ### Milestones and Timeline
 
-**Project Setup (Day 1-2)**
+**Project Setup**
 - Set up React project
 - Install necessary dependencies
 
-**Backend Development (Day 3-5)**
+**Backend Development**
 - Implement WebSocket server
 - Integrate Gemini 1.5 for poem generation
 
-**Frontend Development (Day 6-10)**
+**Frontend Development**
 - Create main WebSocketComponent
 - Implement speech recognition
 - Develop settings modal
 - Design and implement UI
 
-**Data Visualization (Day 11-12)**
+**Data Visualization**
 - Implement D3.js for radar chart
 
-**Testing and Refinement (Day 13-14)**
+**Testing and Refinement**
 - Conduct thorough testing
 - Refine UI and functionality
 
-**Documentation and Deployment (Day 15)**
+**Documentation and Deployment**
 - Finalize documentation
 - Prepare for deployment
+- Github pages for frontend (Frontend URL: https://sarvesh788.github.io/AI-Poetry-Generation/ )
+- Render for backend ( Backend URL: https://ai-poetry-generation-backend-new-tag.onrender.com/ )
 
 ![Screenshot 2024-08-28 195118](https://github.com/user-attachments/assets/3f2f676c-4f65-4430-9254-39ccfe7f2b9e)
 
