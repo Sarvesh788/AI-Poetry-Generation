@@ -12,21 +12,21 @@
 **Backend Development**
 - Implemented WebSocket server
 - Implemented in Python
-- Integrate Gemini 1.5 for poem generation
+- Integrated Gemini 1.5 for poem generation
 
 **Frontend Development**
 - Implemented in React-Spring
-- Create main WebSocketComponent
-- Implement speech recognition
-- Develop settings modal
-- Design and implement UI
+- Created main WebSocketComponent
+- Implemented speech recognition
+- Developed settings modal
+- Designed and implemented UI
 
 **Data Visualization**
 - Implemented D3.js for radar chart
 
 **Testing and Refinement**
 - Conducted thorough testing
-- Refineed UI and functionality
+- Refined UI and functionality
 
 **Documentation and Deployment**
 - Finalize documentation
@@ -70,12 +70,12 @@ The Poem Generator App is a web application that allows users to generate poems 
 ## c. Thought Process, Design Considerations, and Justification of Choices
 
 ### Real-time Interaction
-- WebSockets were chosen for real-time, bidirectional communication between the frontend and the backend.
+- WebSockets were chosen for real-time, bidirectional communication between the front end and the back end.
 - This allows for streaming of poem parts, providing a more engaging user experience.
 
 ### Speech Recognition
 - Implemented to make the app more accessible and user-friendly.
-- Allows for hands-free input, which can be more natural for poetic inspiration.
+- Allows hands-free input, which can be more natural for poetic inspiration.
 
 ### Customizable Parameters
 - Gives users control over the poem's characteristics, enhancing engagement and personalization.
