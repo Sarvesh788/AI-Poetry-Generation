@@ -58,7 +58,7 @@ The Poem Generator App is a web application that allows users to generate poems 
 ### Poem Generation
 - When a user submits a prompt, it's sent to the backend via WebSocket.
 - The backend uses Gemini 1.5 to generate a poem based on the prompt and parameters.
-- The generated poem is streamed back to the frontend in parts.
+- The generated poem is streamed back to the front end in parts.
 
 ### Display and Visualization
 - Poem lines are displayed with a fade-in animation as they arrive.
@@ -67,7 +67,7 @@ The Poem Generator App is a web application that allows users to generate poems 
 ## c. Thought Process, Design Considerations, and Justification of Choices
 
 ### Real-time Interaction
-- WebSockets were chosen for real-time, bidirectional communication between frontend and backend.
+- WebSockets were chosen for real-time, bidirectional communication between the frontend and the backend.
 - This allows for streaming of poem parts, providing a more engaging user experience.
 
 ### Speech Recognition
@@ -104,6 +104,9 @@ The Poem Generator App is a web application that allows users to generate poems 
 - Radar chart updates accurately based on poem parameters.
 - App handles WebSocket errors and disconnections gracefully.
 - UI is responsive and works on different screen sizes.
+- Example - Prompt - "Lion dancing in the forest"
+- ![image](https://github.com/user-attachments/assets/5869580c-f608-48a3-b5e1-61df60a0a46f)
+
 
 ## f. List of Potential Enhancements
 
