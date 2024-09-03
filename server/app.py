@@ -49,9 +49,8 @@ async def generate_poem_parts(prompt, websocket):
         poem_text = " ".join([part.text for part in candidate.content.parts])
         for sentence in poem_text.split(". "):
             if sentence:
-                # print(sentence.strip())
                 await websocket.send(sentence.strip() + ".")  # Send each sentence as it's ready
-                await asyncio.sleep(0.5)  # Simulate delay for demonstration
+                await asyncio.sleep(0.5) 
 
 async def handle_connection(websocket, path):
     port = int(os.environ.get("PORT", 8765))

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './settingsModal.css'; // Add appropriate styles here
+import './settingsModal.css';
 
 const SettingsModal = ({ isOpen, onClose, onSave }) => {
     const [happiness, setHappiness] = useState(5);

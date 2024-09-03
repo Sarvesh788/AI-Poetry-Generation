@@ -5,8 +5,8 @@
     color: #e0e0e0;
     max-width: 400px;
     width: 100%;
-    max-height: 80vh; /* Set a maximum height */
-    overflow-y: auto; /* Allow scrolling if content exceeds the height */
+    max-height: 80vh;
+    overflow-y: auto; 
     position: fixed;
     top:7%;
     right : 0%;
