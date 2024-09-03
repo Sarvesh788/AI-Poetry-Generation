@@ -1,6 +1,0 @@
-1. We can keep users to input the chat feature to request something related to poetry.
-2. Socket programming and emotion analysis.
-3. Should Add features like make grammar simple.
-4. Include audio
-5. Must include the amount of rhyme.
-6. The code breaks when no prompt is added and just enter is pressed.
